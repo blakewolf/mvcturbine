@@ -198,7 +198,8 @@ namespace MvcTurbine.Web {
         /// <summary>
         /// Setup registration for "top" level pieces of the application
         /// </summary>
-        private void AutoRegistrationForContext() {
+        private void AutoRegistrationForContext()
+        {
             var registrationList = new AutoRegistrationList();
 
             registrationList
@@ -207,6 +208,12 @@ namespace MvcTurbine.Web {
                 .Add(Registration.Simple<IHttpModule>());
 
             ProcessAutomaticRegistration(registrationList);
+
+            //Once we have registered for AutoRegistrationForContext we need to register for AutoRegistrationForBlades
+            lock (_regLock)
+            {
+                automaticRegistrationHasCompleted = false;
+            }
         }
 
         /// <summary>
