@@ -121,7 +121,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>xcopy $(TargetDir)*.dll $(SolutionDir)..\..\build\binaries\Unity\*.dll /Y /E
-xcopy $(TargetDir)*.xml $(SolutionDir)..\..\build\binaries\Unity\*.xml /Y /E</PostBuildEvent>
+    <PostBuildEvent>IF NOT '$(IsFullBuild)'=='True' xcopy $(TargetDir)*.dll $(SolutionDir)..\..\build\binaries\Unity\*.dll /Y /E
+IF NOT '$(IsFullBuild)'=='True' xcopy $(TargetDir)*.xml $(SolutionDir)..\..\build\binaries\Unity\*.xml /Y /E</PostBuildEvent>
   </PropertyGroup>
 </Project>
