@@ -3,7 +3,7 @@ MVC Turbine - Converting Flow into Useful Work
 ![MVC Turbine](http://download.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=mvcturbine&DownloadId=128771 "MVC Turbine")
 
 # LICENSE
-Apache 2.0 - see LICENSE
+Apache 2.0 - see LICENSE.txt
 
 # IMPORTANT
 This source represents the v2.1 of MVC Turbine.  For getting the latest releases, go to [main portal site](http://turbineproject.com) or to start a conversation check out the [Google Group](http://groups.google.com/group/mvcturbine).
