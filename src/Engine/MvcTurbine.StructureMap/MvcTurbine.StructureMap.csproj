@@ -110,7 +110,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>xcopy $(TargetDir)*.dll $(SolutionDir)..\..\build\binaries\StructureMap\*.dll /Y /E
-xcopy $(TargetDir)*.xml $(SolutionDir)..\..\build\binaries\StructureMap\*.xml /Y /E</PostBuildEvent>
+    <PostBuildEvent>IF NOT '$(IsFullBuild)'=='True' xcopy $(TargetDir)*.dll $(SolutionDir)..\..\build\binaries\StructureMap\*.dll /Y /E
+IF NOT '$(IsFullBuild)'=='True' xcopy $(TargetDir)*.xml $(SolutionDir)..\..\build\binaries\StructureMap\*.xml /Y /E</PostBuildEvent>
   </PropertyGroup>
 </Project>

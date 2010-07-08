@@ -118,7 +118,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>xcopy $(TargetDir)*.dll $(SolutionDir)..\..\build\binaries\Windsor\*.dll /Y /E
-xcopy $(TargetDir)*.xml $(SolutionDir)..\..\build\binaries\Windsor\*.xml /Y /E</PostBuildEvent>
+    <PostBuildEvent>IF NOT '$(IsFullBuild)'=='True' xcopy $(TargetDir)*.dll $(SolutionDir)..\..\build\binaries\Windsor\*.dll /Y /E
+IF NOT '$(IsFullBuild)'=='True' xcopy $(TargetDir)*.xml $(SolutionDir)..\..\build\binaries\Windsor\*.xml /Y /E</PostBuildEvent>
   </PropertyGroup>
 </Project>
